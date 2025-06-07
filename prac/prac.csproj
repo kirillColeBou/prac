@@ -6,15 +6,26 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Мастер пол.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Item\" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\Мастер пол.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Мастер пол.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\Мастер пол.ico" />
   </ItemGroup>
 
 </Project>

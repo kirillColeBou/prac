@@ -23,6 +23,19 @@ namespace prac.Pages
         public Main()
         {
             InitializeComponent();
+            loadItems();
+        }
+
+        public void loadItems()
+        {
+            parent.Children.Clear();
+            foreach (var item in MainWindow.context.partner)
+                parent.Children.Add(new Item.Item(item));
+        }
+
+        private void addOrChange(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

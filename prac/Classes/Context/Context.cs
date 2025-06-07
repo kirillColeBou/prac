@@ -12,12 +12,16 @@ namespace prac.Classes.Context
     {
         public DbSet<Partner> partner { get; set; }
         public DbSet<TypePartner> typePartner { get; set; }
+        public DbSet<Product> product { get; set; }
+        public DbSet<PartnerProduct> partner_product { get; set; }
 
         public Context()
         {
             Database.EnsureCreated();
             partner.Load();
             typePartner.Load();
+            product.Load();
+            partner_product.Load();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

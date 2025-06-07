@@ -8,7 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Image Source="/Images/logo.png" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0"/>
+        <Label Content="Поставщики" FontFamily="Segoe UI" Margin="90,25,0,0" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="20,90,20,40" ToolTip="Прокручиваемый список">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Background="#F4E8D3 ">
+                <StackPanel x:Name="parent"/>
+            </ScrollViewer>
+        </Border>
+        <Button Click="addOrChange" Height="24" Width="150" Background="#67BA80" Margin="0,0,20,10" Content="Добавить" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

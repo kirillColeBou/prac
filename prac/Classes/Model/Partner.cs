@@ -11,11 +11,8 @@ namespace prac.Classes.Model
         public int id { get; set; }
         public virtual TypePartner typePartner { get; set; }
         public string nameCompany { get; set; }
-        public string address { get; set; }
-        public int inn { get; set; }
         public string fioDirector { get; set; }
         public string telephone { get; set; }
-        public string email { get; set; }
         public int rating { get; set; }
     }
 }
