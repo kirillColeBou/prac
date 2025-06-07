@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace prac.Classes.Model
 {
-    public class Product
+    public class Material
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public virtual TypeProduct typeProduct { get; set; }
-        public double priceMin { get; set; }
+        public double defectRate { get; set; }
     }
 }

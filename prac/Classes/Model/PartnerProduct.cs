@@ -12,5 +12,6 @@ namespace prac.Classes.Model
         public virtual Product product { get; set; }
         public virtual Partner partner { get; set; }
         public int countProduct { get; set; }
+        public DateTime dateSell { get; set; }
     }
 }

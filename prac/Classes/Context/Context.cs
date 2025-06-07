@@ -14,6 +14,8 @@ namespace prac.Classes.Context
         public DbSet<TypePartner> typePartner { get; set; }
         public DbSet<Product> product { get; set; }
         public DbSet<PartnerProduct> partner_product { get; set; }
+        public DbSet<Material> material { get; set; }
+        public DbSet<TypeProduct> typeProduct { get; set; }
 
         public Context()
         {
@@ -22,6 +24,8 @@ namespace prac.Classes.Context
             typePartner.Load();
             product.Load();
             partner_product.Load();
+            material.Load();
+            typeProduct.Load();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -58,6 +58,6 @@ namespace prac.Item
             Add.add.addBtn.Content = "Изменить";
         }
 
-        private void historyProduct(object sender, System.Windows.RoutedEventArgs e) { } //=> MainWindow.mainWindow.frame.Navigate(new History(partners.id));
+        private void historyProduct(object sender, System.Windows.RoutedEventArgs e) => MainWindow.mainWindow.frame.Navigate(new History(partner.id));
     }
 }
