@@ -1,5 +1,8 @@
-﻿using prac.Classes.Context;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace prac
+namespace prac.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Page
     {
-        public static Context context;
-        public static MainWindow mainWindow;
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            context = new Context();
-            mainWindow = this;
-            frame.Navigate(new Pages.Main());
         }
     }
 }
