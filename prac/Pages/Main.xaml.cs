@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prac.Classes.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,22 +21,21 @@ namespace prac.Pages
     /// </summary>
     public partial class Main : Page
     {
+        Context context;
         public Main()
         {
             InitializeComponent();
+            context = new Context();
             loadItems();
         }
 
         public void loadItems()
         {
             parent.Children.Clear();
-            foreach (var item in MainWindow.context.partner)
+            foreach (var item in context.partner)
                 parent.Children.Add(new Item.Item(item));
         }
 
-        private void addOrChange(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void addOrChange(object sender, RoutedEventArgs e) => MainWindow.mainWindow.frame.Navigate(new Add());
     }
 }

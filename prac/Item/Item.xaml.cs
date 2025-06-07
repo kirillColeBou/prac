@@ -1,5 +1,6 @@
 ﻿using prac.Classes.Context;
 using prac.Classes.Model;
+using prac.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,14 +51,13 @@ namespace prac.Item
             else return 15;
         }
 
-        private void updatePartner(object sender, MouseButtonEventArgs e)
+        private void updatePartner(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-
+            MainWindow.mainWindow.frame.Navigate(new Add(partner));
+            Add.add.header.Content = "Изменение партнера";
+            Add.add.addBtn.Content = "Изменить";
         }
 
-        private void historyProduct(object sender, RoutedEventArgs e)
-        {
-
-        }
+        private void historyProduct(object sender, System.Windows.RoutedEventArgs e) { } //=> MainWindow.mainWindow.frame.Navigate(new History(partners.id));
     }
 }

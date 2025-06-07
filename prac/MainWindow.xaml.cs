@@ -17,12 +17,10 @@ namespace prac
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static Context context;
         public static MainWindow mainWindow;
         public MainWindow()
         {
             InitializeComponent();
-            context = new Context();
             mainWindow = this;
             frame.Navigate(new Pages.Main());
         }
